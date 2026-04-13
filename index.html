@@ -260,6 +260,41 @@
       </div>
     </footer>
 
+    <button
+      class="chat-toggle"
+      id="chat-toggle"
+      type="button"
+      aria-label="Open chat assistant"
+      aria-expanded="false"
+      aria-controls="chat-widget"
+    >
+      Chat
+    </button>
+
+    <section class="chat-widget" id="chat-widget" aria-live="polite" hidden>
+      <div class="chat-header">
+        <h3>Krishna's Assistant</h3>
+        <button class="chat-close" id="chat-close" type="button" aria-label="Close chat">
+          x
+        </button>
+      </div>
+      <div class="chat-messages" id="chat-messages">
+        <div class="chat-message bot">
+          Hi! Ask me about Krishna's experience, certifications, skills, or contact details.
+        </div>
+      </div>
+      <form class="chat-input-row" id="chat-form">
+        <input
+          id="chat-input"
+          type="text"
+          placeholder="Type your question..."
+          autocomplete="off"
+          required
+        />
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </section>
+
     <script src="script.js"></script>
   </body>
 </html>
