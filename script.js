@@ -130,11 +130,19 @@ if (chatToggle && chatWidget) {
 }
 
 if (chatClose) {
-  chatClose.addEventListener("click", closeChat);
+  chatClose.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    closeChat();
+  });
 }
 
 if (chatMinimize) {
-  chatMinimize.addEventListener("click", toggleMinimizeChat);
+  chatMinimize.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    toggleMinimizeChat();
+  });
 }
 
 if (chatForm && chatInput) {
