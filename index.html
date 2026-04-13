@@ -274,9 +274,20 @@
     <section class="chat-widget" id="chat-widget" aria-live="polite" hidden>
       <div class="chat-header">
         <h3>Krishna's Assistant</h3>
-        <button class="chat-close" id="chat-close" type="button" aria-label="Close chat">
-          x
-        </button>
+        <div class="chat-header-actions">
+          <button
+            class="chat-minimize"
+            id="chat-minimize"
+            type="button"
+            aria-label="Minimize chat"
+            aria-expanded="true"
+          >
+            -
+          </button>
+          <button class="chat-close" id="chat-close" type="button" aria-label="Close chat">
+            x
+          </button>
+        </div>
       </div>
       <div class="chat-messages" id="chat-messages">
         <div class="chat-message bot">

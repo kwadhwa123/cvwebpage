@@ -305,6 +305,12 @@ textarea:focus {
   font-size: 0.95rem;
 }
 
+.chat-header-actions {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.chat-minimize,
 .chat-close {
   border: 1px solid var(--border);
   background: transparent;
@@ -312,6 +318,15 @@ textarea:focus {
   border-radius: 8px;
   cursor: pointer;
   padding: 0.2rem 0.45rem;
+}
+
+.chat-widget.collapsed .chat-messages,
+.chat-widget.collapsed .chat-input-row {
+  display: none;
+}
+
+.chat-widget.collapsed {
+  grid-template-rows: auto;
 }
 
 .chat-messages {

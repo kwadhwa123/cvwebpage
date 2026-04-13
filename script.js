@@ -27,6 +27,7 @@ if (form && formNote) {
 const chatToggle = document.getElementById("chat-toggle");
 const chatWidget = document.getElementById("chat-widget");
 const chatClose = document.getElementById("chat-close");
+const chatMinimize = document.getElementById("chat-minimize");
 const chatForm = document.getElementById("chat-form");
 const chatInput = document.getElementById("chat-input");
 const chatMessages = document.getElementById("chat-messages");
@@ -77,7 +78,13 @@ function openChat() {
   }
 
   chatWidget.hidden = false;
+  chatWidget.classList.remove("collapsed");
   chatToggle.setAttribute("aria-expanded", "true");
+  if (chatMinimize) {
+    chatMinimize.textContent = "-";
+    chatMinimize.setAttribute("aria-label", "Minimize chat");
+    chatMinimize.setAttribute("aria-expanded", "true");
+  }
   if (chatInput) {
     chatInput.focus();
   }
@@ -92,6 +99,26 @@ function closeChat() {
   chatToggle.setAttribute("aria-expanded", "false");
 }
 
+function toggleMinimizeChat() {
+  if (!chatWidget || !chatMinimize) {
+    return;
+  }
+
+  const isCollapsed = chatWidget.classList.toggle("collapsed");
+  if (isCollapsed) {
+    chatMinimize.textContent = "+";
+    chatMinimize.setAttribute("aria-label", "Expand chat");
+    chatMinimize.setAttribute("aria-expanded", "false");
+  } else {
+    chatMinimize.textContent = "-";
+    chatMinimize.setAttribute("aria-label", "Minimize chat");
+    chatMinimize.setAttribute("aria-expanded", "true");
+    if (chatInput) {
+      chatInput.focus();
+    }
+  }
+}
+
 if (chatToggle && chatWidget) {
   chatToggle.addEventListener("click", () => {
     if (chatWidget.hidden) {
@@ -104,6 +131,10 @@ if (chatToggle && chatWidget) {
 
 if (chatClose) {
   chatClose.addEventListener("click", closeChat);
+}
+
+if (chatMinimize) {
+  chatMinimize.addEventListener("click", toggleMinimizeChat);
 }
 
 if (chatForm && chatInput) {
