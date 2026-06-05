@@ -51,7 +51,7 @@ function getBotReply(input) {
     return "Hello! I can help with Krishna's experience, certifications, skills, education, and contact details.";
   }
   if (text.includes("experience") || text.includes("work") || text.includes("career")) {
-    return "Krishna has around 10 years of ServiceNow experience and has worked at Gartner, HCL Technologies, NTT Data Services, and Coforge.";
+    return "Krishna has around 10 years of ServiceNow experience and has worked at McKinsey, Gartner, HCL Technologies, NTT Data Services, and Coforge.";
   }
   if (text.includes("certification") || text.includes("certified")) {
     return "Krishna holds CSA, CAD, CIS-ITSM, CIS-SP, and CIS-HRSD certifications.";
@@ -65,8 +65,11 @@ function getBotReply(input) {
   if (text.includes("contact") || text.includes("email") || text.includes("phone")) {
     return "You can reach Krishna at Krishna.wadhwa1992@gmail.com or +91 9971019707.";
   }
-  if (text.includes("current") || text.includes("gartner")) {
-    return "Krishna is currently a Senior Software Engineer at Gartner, working on ITSM PRO, Virtual Agent, integrations, SAM PRO, and technical leadership.";
+  if (text.includes("current") || text.includes("mckinsey") || text.includes("now assist") || text.includes("ai agent")) {
+    return "Krishna is currently a Senior Software Engineer 1 at McKinsey, working on Now Assist, AI Agents, Virtual Agent conversations, and AI-driven self-service solutions.";
+  }
+  if (text.includes("gartner")) {
+    return "At Gartner (May 2024 - January 2026), Krishna worked on ITSM PRO, Virtual Agent, integrations, SAM PRO, and technical leadership.";
   }
 
   return "I can answer questions about experience, certifications, skills, education, and contact info. Try asking: 'What certifications does Krishna have?'";
