@@ -7,20 +7,52 @@ if (yearEl) {
 }
 
 if (form && formNote) {
-  form.addEventListener("submit", (event) => {
+  const submitButton = form.querySelector('button[type="submit"]');
+
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     const formData = new FormData(form);
-    const name = encodeURIComponent(formData.get("name") || "");
-    const email = encodeURIComponent(formData.get("email") || "");
-    const message = encodeURIComponent(formData.get("message") || "");
+    const name = (formData.get("name") || "").toString().trim();
+    const email = (formData.get("email") || "").toString().trim();
+    const message = (formData.get("message") || "").toString().trim();
 
-    const subject = `Website inquiry from ${name}`;
-    const body = `Name: ${name}%0AEmail: ${email}%0A%0AMessage:%0A${message}`;
+    if (submitButton) {
+      submitButton.disabled = true;
+    }
+    formNote.textContent = "Sending your message...";
 
-    window.location.href = `mailto:Krishna.wadhwa1992@gmail.com?subject=${subject}&body=${body}`;
-    formNote.textContent = "Opening your email app...";
-    form.reset();
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/Krishna.wadhwa1992@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+          _subject: `Website inquiry from ${name}`,
+          _replyto: email,
+          _captcha: "false",
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Request failed");
+      }
+
+      formNote.textContent = "Message sent successfully. I'll get back to you soon.";
+      form.reset();
+    } catch {
+      formNote.textContent =
+        "Unable to send right now. Please email Krishna.wadhwa1992@gmail.com directly.";
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+      }
+    }
   });
 }
 
