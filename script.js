@@ -54,7 +54,7 @@ function getBotReply(input) {
     return "Krishna has around 10 years of ServiceNow experience and has worked at McKinsey, Gartner, HCL Technologies, NTT Data Services, and Coforge.";
   }
   if (text.includes("certification") || text.includes("certified")) {
-    return "Krishna holds CSA, CAD, CIS-ITSM, CIS-SP, and CIS-HRSD certifications.";
+    return "Krishna holds CSA, CAD, CIS-ITSM, CIS-SP, CIS-HRSD, and CIS-Data Foundation certifications.";
   }
   if (text.includes("skill") || text.includes("technology") || text.includes("tech")) {
     return "Key skills include ServiceNow ITSM/ITOM, Service Portal, UI Builder, Flow Designer, REST APIs, JavaScript, HTML, CSS, ITIL, and Agile.";
