@@ -80,31 +80,62 @@ function getBotReply(input) {
   const text = input.toLowerCase();
 
   if (text.includes("hello") || text.includes("hi") || text.includes("hey")) {
-    return "Hello! I can help with Krishna's experience, certifications, skills, education, and contact details.";
-  }
-  if (text.includes("experience") || text.includes("work") || text.includes("career")) {
-    return "Krishna has around 10 years of ServiceNow experience and has worked at McKinsey, Gartner, HCL Technologies, NTT Data Services, and Coforge.";
-  }
-  if (text.includes("certification") || text.includes("certified")) {
-    return "Krishna holds CSA, CAD, CIS-ITSM, CIS-SP, CIS-HRSD, and CIS-Data Foundation certifications.";
-  }
-  if (text.includes("skill") || text.includes("technology") || text.includes("tech")) {
-    return "Key skills include ServiceNow ITSM/ITOM, Service Portal, UI Builder, Flow Designer, REST APIs, JavaScript, HTML, CSS, ITIL, and Agile.";
-  }
-  if (text.includes("education") || text.includes("degree")) {
-    return "Krishna completed MCA and BCA from Guru Gobind Singh Indraprastha University, and schooling from BBPS (CBSE).";
-  }
-  if (text.includes("contact") || text.includes("email") || text.includes("phone")) {
-    return "You can reach Krishna at Krishna.wadhwa1992@gmail.com or +91 9971019707.";
-  }
-  if (text.includes("current") || text.includes("mckinsey") || text.includes("now assist") || text.includes("ai agent")) {
-    return "Krishna is currently a Senior Software Engineer 1 at McKinsey, working on Now Assist, AI Agents, Virtual Agent conversations, and AI-driven self-service solutions.";
-  }
-  if (text.includes("gartner")) {
-    return "At Gartner (May 2024 - January 2026), Krishna worked on ITSM PRO, Virtual Agent, integrations, SAM PRO, and technical leadership.";
+    return "Hello! I can help with Krishna's experience, certifications, skills, education, biography, and contact details. Ask about a specific company (e.g. McKinsey, Gartner, HCL, NTT, Coforge) for full detail.";
   }
 
-  return "I can answer questions about experience, certifications, skills, education, and contact info. Try asking: 'What certifications does Krishna have?'";
+  if (text.includes("mckinsey") || text.includes("now assist") || (text.includes("ai") && text.includes("agent"))) {
+    return "Senior Software Engineer 1 at McKinsey (January 2026 - Present): configuring and customizing Now Assist features, building AI Agents and conversational workflows, developing Virtual Agent conversations and integrations, implementing AI-driven self-service solutions, integrating backend workflows and catalog items with AI interactions, customizing prompts/topics/conversational experiences, and testing/optimizing AI agent performance within ServiceNow environments.";
+  }
+
+  if (text.includes("gartner") || text.includes("sam pro") || text.includes("predictive intelligence")) {
+    return "Senior Software Engineer at Gartner (May 2024 - January 2026): hands-on with ITSM PRO offerings (Virtual Agent, Predictive Intelligence, Employee Center), end-to-end ServiceNow implementation, Predictive Intelligence for ITSM and custom apps to improve ticket routing, integrations with Salesforce, JIRA, Workday, Nexthink, Tangoe, and Okta, collaboration with Incident/Change Management, Agile process improvements with peer review, version upgrades/cloning/production rollouts, custom App Engine Studio apps and Virtual Agent topics, mobile app screens, ongoing Software Asset Management PRO implementation, and technical SME duties for estimation and story reviews.";
+  }
+
+  if (text.includes("hcl")) {
+    return "Lead Technical Specialist at HCL Technologies (May 2022 - May 2024): led full implementation lifecycle (requirements, demos, design workshops, development, testing, UAT, training, hyper-care, BAU handover) across dedicated and domain-separated MSP environments, led a development team, built a utility that cleared a backlog of 11,000+ customer feedback tickets, delivered integrations with Lucy, BMC Remedy, Qualys CMDB sync, Azure AD, SAP, SolarWinds, and SCCM, implemented ITOM and Service Mapping on Azure, delivered Demand Management end to end, automated standard Change creation/closure, migrated 500+ service requests to User Criteria, and supported POCs, upgrades, cloning, and production rollouts.";
+  }
+
+  if (text.includes("ntt")) {
+    return "Senior Software Development Specialist at NTT Data Services (November 2018 - May 2022): worked across a multi-domain environment with 30+ clients using Agile, built scripted REST APIs for ITSM (request, incident, change, problem), designed client-specific Service Portal themes, configured ServiceNow Agent Mobile and Virtual Agent, created client surveys and trigger conditions, implemented Flow Designer automation and converted 300+ service requests, built archiving rules for high-volume tables, handled upgrades/cloning/post-upgrade fixes, built UI Builder pages for P1 incident SMS and device updates, and integrated with Bitly for URL shortening.";
+  }
+
+  if (text.includes("coforge") || text.includes("niit")) {
+    return "Associate IT Ops at Coforge Ltd, formerly NIIT Technologies (July 2016 - November 2018): developed Service Catalogs, Record Producers, and workflows, configured Service Requests/Incident/Change/Problem/CMDB modules, resolved ServiceNow tickets, built email notifications and inbound actions for automated ticket creation, defined SLAs and notifications, configured forms/views/ACLs/client and server-side scripts, and supported weekly production rollouts.";
+  }
+
+  if (text.includes("integration")) {
+    return "Krishna has delivered third-party integrations across roles including Salesforce, JIRA, Workday, Nexthink, Tangoe, Okta, Azure AD, SAP, BMC Remedy, Qualys CMDB sync, SolarWinds, SCCM, and Bitly.";
+  }
+
+  if (text.includes("certification") || text.includes("certified") || text.includes("csa") || text.includes("cad") || text.includes("cis")) {
+    return "Certifications: ServiceNow Certified System Administrator (CSA), Certified Application Developer (CAD), Certified Implementation Specialist - ITSM (CIS-ITSM), CIS - Service Portal (CIS-SP), CIS - HR Service Delivery (CIS-HRSD), and CIS - Data Foundation.";
+  }
+
+  if (text.includes("skill") || text.includes("technology") || text.includes("tech") || text.includes("tool")) {
+    return "Technical skills: JavaScript, HTML, CSS, Bootstrap, ITIL, and Agile, alongside ServiceNow ITSM, ITOM, Service Portal, UI Builder, Flow Designer, and REST API development. Across roles Krishna has also worked with Now Assist/AI Agents, Virtual Agent, Predictive Intelligence, App Engine Studio, Employee Center, and integrations with Salesforce, JIRA, Workday, Okta, Azure AD, SAP, BMC Remedy, and SolarWinds.";
+  }
+
+  if (text.includes("experience") || text.includes("work") || text.includes("career") || text.includes("job") || text.includes("company") || text.includes("companies")) {
+    return "Krishna has around 10 years of ServiceNow experience: Senior Software Engineer 1 at McKinsey (Jan 2026-Present), Senior Software Engineer at Gartner (May 2024-Jan 2026), Lead Technical Specialist at HCL Technologies (May 2022-May 2024), Senior Software Development Specialist at NTT Data Services (Nov 2018-May 2022), and Associate IT Ops at Coforge/NIIT Technologies (Jul 2016-Nov 2018). Ask about any of these companies by name for full role details.";
+  }
+
+  if (text.includes("education") || text.includes("degree") || text.includes("mca") || text.includes("bca") || text.includes("school") || text.includes("university")) {
+    return "Education: Master's in Computer Applications (MCA), 2013-2016, and Bachelor's in Computer Applications (BCA), 2010-2013, both from Guru Gobind Singh Indraprastha University; 12th in 2010 and 10th in 2008 from BBPS, CBSE Board.";
+  }
+
+  if (text.includes("bio") || text.includes("hobby") || text.includes("hobbies") || text.includes("personal") || text.includes("language") || text.includes("birth") || text.includes("married")) {
+    return "Biography: born 19th February 1992, married, hobbies include Cricket, Listening to Music, Cooking, and Hot Wheels, and fluent in English and Hindi.";
+  }
+
+  if (text.includes("contact") || text.includes("email") || text.includes("phone") || text.includes("reach") || text.includes("connect")) {
+    return "You can reach Krishna at Krishna.wadhwa1992@gmail.com or +91 9971019707, or use the contact form on this page for ServiceNow consulting, implementation, or collaboration opportunities.";
+  }
+
+  if (text.includes("current") || text.includes("role") || text.includes("title")) {
+    return "Krishna is currently a Senior Software Engineer 1 at McKinsey (since January 2026), working on Now Assist, AI Agents, Virtual Agent conversations, and AI-driven self-service solutions.";
+  }
+
+  return "I can answer questions about experience, certifications, skills, integrations, education, biography, and contact info. Try asking: 'Tell me about Gartner', 'What certifications does Krishna have?', or 'What integrations has Krishna worked on?'";
 }
 
 function openChat() {
