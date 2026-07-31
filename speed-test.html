@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wifi Speed Test | Krishna Wadhwa</title>
+    <meta
+      name="description"
+      content="Free browser-based wifi speed test. Check your internet download speed, upload speed, and ping instantly."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="speed-test.css" />
+  </head>
+  <body>
+    <header class="hero" id="top">
+      <nav class="container nav">
+        <a class="logo" href="index.html">Krishna Wadhwa</a>
+        <div class="nav-links">
+          <a href="index.html#about">Introduction</a>
+          <a href="index.html#experience">Experience</a>
+          <a href="speed-test.html">Speed Test</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </nav>
+
+      <div class="container hero-content">
+        <p class="eyebrow">Free Tool</p>
+        <h1>Wifi Speed Test</h1>
+        <p class="hero-text">
+          Check your internet's download speed, upload speed, and ping right
+          from your browser. No app or sign-up required.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="section container" id="speed-test">
+        <div class="speed-card">
+          <div class="speed-metrics">
+            <div class="metric">
+              <span class="metric-label">Ping</span>
+              <span class="metric-value" id="metric-ping">--</span>
+              <span class="metric-unit">ms</span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Download</span>
+              <span class="metric-value" id="metric-download">--</span>
+              <span class="metric-unit">Mbps</span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Upload</span>
+              <span class="metric-value" id="metric-upload">--</span>
+              <span class="metric-unit">Mbps</span>
+            </div>
+          </div>
+
+          <button class="btn btn-primary speed-start" id="speed-start" type="button">
+            Start Test
+          </button>
+
+          <p class="speed-status" id="speed-status" aria-live="polite">
+            Press start to measure your wifi speed.
+          </p>
+        </div>
+
+        <p class="speed-note">
+          This test estimates real-world speed by downloading and uploading
+          data through your browser. Results can vary based on network
+          congestion, VPNs, and the device you're testing from.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Krishna Wadhwa. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="speed-test.js"></script>
+  </body>
+</html>

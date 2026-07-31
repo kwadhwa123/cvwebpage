@@ -1,0 +1,80 @@
+.speed-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.speed-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 1rem 0.5rem;
+  background: #111a31;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.metric-label {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.metric-value {
+  font-size: clamp(1.6rem, 5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.metric-value.active {
+  color: var(--success);
+}
+
+.metric-unit {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.speed-start {
+  width: min(280px, 100%);
+}
+
+.speed-start:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.speed-status {
+  margin-top: 1rem;
+  color: var(--muted);
+  min-height: 1.4rem;
+}
+
+.speed-note {
+  max-width: 640px;
+  margin: 1.5rem auto 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (max-width: 620px) {
+  .speed-metrics {
+    grid-template-columns: 1fr;
+  }
+}
