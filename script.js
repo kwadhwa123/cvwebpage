@@ -6,6 +6,28 @@ if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
+const CAREER_START_DATE = new Date(2016, 6, 1); // Coforge Ltd, July 2016
+
+function calculateYearsOfExperience(startDate) {
+  const now = new Date();
+  let years = now.getFullYear() - startDate.getFullYear();
+  const hadAnniversaryThisYear =
+    now.getMonth() > startDate.getMonth() ||
+    (now.getMonth() === startDate.getMonth() && now.getDate() >= startDate.getDate());
+  if (!hadAnniversaryThisYear) {
+    years -= 1;
+  }
+  return years;
+}
+
+const yearsExpEls = document.querySelectorAll(".years-exp");
+if (yearsExpEls.length) {
+  const yearsExp = calculateYearsOfExperience(CAREER_START_DATE);
+  yearsExpEls.forEach((el) => {
+    el.textContent = yearsExp;
+  });
+}
+
 if (form && formNote) {
   const submitButton = form.querySelector('button[type="submit"]');
 
