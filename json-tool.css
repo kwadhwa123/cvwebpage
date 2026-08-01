@@ -1,0 +1,73 @@
+.json-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.75rem 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.json-label {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.json-textarea {
+  width: 100%;
+  min-height: 200px;
+  resize: vertical;
+  border: 1px solid var(--border);
+  background: #0f162c;
+  color: var(--text);
+  border-radius: 10px;
+  padding: 0.85rem;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.json-textarea:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+
+.json-textarea[readonly] {
+  background: #0b1122;
+}
+
+.json-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0.25rem 0;
+}
+
+.json-actions .btn {
+  padding: 0.55rem 0.9rem;
+}
+
+.json-status {
+  margin: 0;
+  min-height: 1.4rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.json-status.error {
+  color: #ff8787;
+}
+
+.json-status.success {
+  color: var(--success);
+}
+
+@media (max-width: 620px) {
+  .json-actions .btn {
+    flex: 1 1 calc(50% - 0.6rem);
+  }
+}

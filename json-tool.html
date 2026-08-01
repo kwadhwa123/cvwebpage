@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON Parser &amp; Formatter | Krishna Wadhwa</title>
+    <meta
+      name="description"
+      content="Free browser-based JSON parser, validator, formatter, and minifier."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="json-tool.css" />
+  </head>
+  <body>
+    <header class="hero" id="top">
+      <nav class="container nav">
+        <a class="logo" href="index.html">Krishna Wadhwa</a>
+        <div class="nav-links">
+          <a href="index.html#about">Introduction</a>
+          <a href="index.html#experience">Experience</a>
+          <a href="index.html#contact">Contact</a>
+          <a href="speed-test.html">Speed Test</a>
+          <a href="json-tool.html">JSON Tool</a>
+        </div>
+      </nav>
+
+      <div class="container hero-content">
+        <p class="eyebrow">Free Tool</p>
+        <h1>JSON Parser &amp; Formatter</h1>
+        <p class="hero-text">
+          Paste JSON to validate, pretty-print, or minify it, right in your
+          browser. Nothing is sent to a server.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="section container" id="json-tool">
+        <div class="json-card">
+          <label for="json-input" class="json-label">Input</label>
+          <textarea
+            id="json-input"
+            class="json-textarea"
+            spellcheck="false"
+            placeholder='{"hello": "world"}'
+          ></textarea>
+
+          <div class="json-actions">
+            <button class="btn btn-primary" id="json-format" type="button">Format</button>
+            <button class="btn btn-secondary" id="json-minify" type="button">Minify</button>
+            <button class="btn btn-secondary" id="json-copy" type="button">Copy Output</button>
+            <button class="btn btn-secondary" id="json-clear" type="button">Clear</button>
+          </div>
+
+          <p class="json-status" id="json-status" aria-live="polite">
+            Paste some JSON and press Format or Minify.
+          </p>
+
+          <label for="json-output" class="json-label">Output</label>
+          <textarea
+            id="json-output"
+            class="json-textarea"
+            spellcheck="false"
+            readonly
+          ></textarea>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Krishna Wadhwa. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="json-tool.js"></script>
+  </body>
+</html>
