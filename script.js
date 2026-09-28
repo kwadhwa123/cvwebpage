@@ -134,7 +134,7 @@ function getBotReply(input) {
   }
 
   if (text.includes("skill") || text.includes("technology") || text.includes("tech") || text.includes("tool")) {
-    return "Technical skills: JavaScript, HTML, CSS, Bootstrap, ITIL, and Agile, alongside ServiceNow ITSM, ITOM, Service Portal, UI Builder, Flow Designer, and REST API development. Across roles Krishna has also worked with Now Assist/AI Agents, Virtual Agent, Predictive Intelligence, App Engine Studio, Employee Center, and integrations with Salesforce, JIRA, Workday, Okta, Azure AD, SAP, BMC Remedy, and SolarWinds.";
+    return "Technical skills: JavaScript, HTML, CSS, Bootstrap, ITIL, and Agile, alongside ServiceNow ITSM, ITOM, Service Portal, UI Builder, Flow Designer, and REST API development. Krishna also works with Claude and Cursor for AI-assisted development. Across roles Krishna has also worked with Now Assist/AI Agents, Virtual Agent, Predictive Intelligence, App Engine Studio, Employee Center, and integrations with Salesforce, JIRA, Workday, Okta, Azure AD, SAP, BMC Remedy, and SolarWinds.";
   }
 
   if (text.includes("experience") || text.includes("work") || text.includes("career") || text.includes("job") || text.includes("company") || text.includes("companies")) {
