@@ -106,7 +106,7 @@ function getBotReply(input) {
   }
 
   if (text.includes("mckinsey") || text.includes("now assist") || (text.includes("ai") && text.includes("agent"))) {
-    return "Senior Software Implementation 1 at McKinsey (January 2026 - Present): designing AI-enabled solutions, configuring and customizing Now Assist features, building AI Agents and conversational workflows, developing Virtual Agent conversations and integrations, implementing bot-to-bot integration, implementing AI-driven self-service solutions, integrating backend workflows and catalog items with AI interactions, customizing prompts/topics/conversational experiences, and testing/optimizing AI agent performance within ServiceNow environments.";
+    return "ServiceNow Architect - AI, Now Assist & Conversational AI at McKinsey (January 2026 - Present): partnering with stakeholders to define scalable Now Assist, AI Agent, and Virtual Agent solutions, architecting Now Assist configuration and AI Agent conversational workflows and orchestration logic, designing Virtual Agent experiences and AI-driven self-service capabilities, architecting integrations between AI experiences and backend ServiceNow workflows (Catalog Items, Flow Designer, Business Rules, Scripted APIs), defining conversational architecture (prompts, topics, intents, contextual flows, escalation), leading technical discussions and the team delivering AI-enabled projects, and providing testing, optimization, and architectural governance for AI and conversational solutions.";
   }
 
   if (text.includes("gartner") || text.includes("sam pro") || text.includes("predictive intelligence")) {
@@ -138,7 +138,7 @@ function getBotReply(input) {
   }
 
   if (text.includes("experience") || text.includes("work") || text.includes("career") || text.includes("job") || text.includes("company") || text.includes("companies")) {
-    return "Krishna has around 10 years of ServiceNow experience: Senior Software Implementation 1 at McKinsey (Jan 2026-Present), Senior Software Engineer at Gartner (May 2024-Jan 2026), Lead Technical Specialist at HCL Technologies (May 2022-May 2024), Senior Software Development Specialist at NTT Data Services (Nov 2018-May 2022), and Associate IT Ops at Coforge/NIIT Technologies (Jul 2016-Nov 2018). Ask about any of these companies by name for full role details.";
+    return "Krishna has around 10 years of ServiceNow experience: ServiceNow Architect - AI, Now Assist & Conversational AI at McKinsey (Jan 2026-Present), Senior Software Engineer at Gartner (May 2024-Jan 2026), Lead Technical Specialist at HCL Technologies (May 2022-May 2024), Senior Software Development Specialist at NTT Data Services (Nov 2018-May 2022), and Associate IT Ops at Coforge/NIIT Technologies (Jul 2016-Nov 2018). Ask about any of these companies by name for full role details.";
   }
 
   if (text.includes("education") || text.includes("degree") || text.includes("mca") || text.includes("bca") || text.includes("school") || text.includes("university")) {
@@ -154,7 +154,7 @@ function getBotReply(input) {
   }
 
   if (text.includes("current") || text.includes("role") || text.includes("title")) {
-    return "Krishna is currently a Senior Software Implementation 1 at McKinsey (since January 2026), working on Now Assist, AI Agents, Virtual Agent conversations, and AI-driven self-service solutions.";
+    return "Krishna is currently a ServiceNow Architect - AI, Now Assist & Conversational AI at McKinsey (since January 2026), architecting Now Assist, AI Agent, and Virtual Agent solutions and leading the team delivering AI-enabled projects.";
   }
 
   return "I can answer questions about experience, certifications, skills, integrations, education, biography, and contact info. Try asking: 'Tell me about Gartner', 'What certifications does Krishna have?', or 'What integrations has Krishna worked on?'";
