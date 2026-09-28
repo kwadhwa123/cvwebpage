@@ -106,7 +106,7 @@ function getBotReply(input) {
   }
 
   if (text.includes("mckinsey") || text.includes("now assist") || (text.includes("ai") && text.includes("agent"))) {
-    return "ServiceNow Architect - AI, Now Assist & Conversational AI at McKinsey (January 2026 - Present): partnering with stakeholders to define scalable Now Assist, AI Agent, and Virtual Agent solutions, architecting Now Assist configuration and AI Agent conversational workflows and orchestration logic, designing Virtual Agent experiences and AI-driven self-service capabilities, architecting integrations between AI experiences and backend ServiceNow workflows (Catalog Items, Flow Designer, Business Rules, Scripted APIs), defining conversational architecture (prompts, topics, intents, contextual flows, escalation), leading technical discussions and the team delivering AI-enabled projects, and providing testing, optimization, and architectural governance for AI and conversational solutions.";
+    return "ServiceNow Architect - AI, Now Assist & Conversational AI at McKinsey (January 2026 - Present): architecting Now Assist, AI Agent, and Virtual Agent solutions, designing conversational and backend integration architecture, leading the team delivering AI-enabled projects, and governing AI solution quality and standards.";
   }
 
   if (text.includes("gartner") || text.includes("sam pro") || text.includes("predictive intelligence")) {
