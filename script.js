@@ -106,7 +106,7 @@ function getBotReply(input) {
   }
 
   if (text.includes("mckinsey") || text.includes("now assist") || (text.includes("ai") && text.includes("agent"))) {
-    return "Senior Software Implementation 1 at McKinsey (January 2026 - Present): architecting Now Assist, AI Agent, and Virtual Agent solutions, designing conversational and backend integration architecture, leading the team delivering AI-enabled projects, and governing AI solution quality and standards.";
+    return "Senior Software Implementation 1 at McKinsey (January 2026 - Present): architecting Now Assist, AI Agent, and Virtual Agent solutions, designing conversational and backend integration architecture, implementing bot-to-bot integration between the in-house chatbot and Now Assist, leading the team delivering AI-enabled projects, and governing AI solution quality and standards.";
   }
 
   if (text.includes("gartner") || text.includes("sam pro") || text.includes("predictive intelligence")) {
